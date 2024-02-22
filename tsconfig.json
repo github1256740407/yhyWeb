@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", //目标语言版本
+    "useDefineForClassFields": true,
+    "module": "ESNext", //生成代码的模板标准
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true, //是否跳过三方库声明文件的类型检查
+
+    /* Bundler mode */
+    "moduleResolution": "bundler", //模板解析策略
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true, //是否解析JSON模块
+    "isolatedModules": true, //是否为每个文件转换成单独的模块
+    "noEmit": true,
+    "jsx": "preserve", //指定jsx格式
+
+    /* Linting */
+    "strict": true, //是否启用严格校验检查
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* 路径别名配置 */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  // 指定被编译文件的所在目录
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  // 项目引用,是TS3.0中的新功能,它允许将TS程序组织成更小部分
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

@@ -1,0 +1,33 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "name": "echartsShow",
+      "path": "/echartsShow",
+      "redirect": "/echartsShow/dataOverview",
+      "meta": {
+        "name": "Echarts图表组件",
+        "icon": "PieChart"
+      },
+      "children": [
+        {
+          "name": "dataOverview",
+          "path": "/echartsShow/dataOverview",
+          "meta": {
+            "name": "普通图表"
+          },
+          "component": "/echartsShow/dataOverview.vue"
+        },
+        {
+          "name": "tradeOverview",
+          "path": "/echartsShow/tradeOverview",
+          "meta": {
+            "name": "复杂图表"
+          },
+          "component": "/echartsShow/tradeOverview.vue"
+        }
+      ]
+    }
+  ],
+  "message": "success"
+}
